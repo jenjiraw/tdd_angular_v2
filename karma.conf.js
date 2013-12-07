@@ -5,6 +5,7 @@ module.exports = function(karma) {
   karma.set({
 
     // base path, that will be used to resolve files and exclude
+    // If putting '', it is folder that we keep Karma.conf.js file
     basePath: '',
 
 
@@ -15,13 +16,14 @@ module.exports = function(karma) {
     // list of files / patterns to load in the browser
     files: [
     // libraries
+    // call load angular before other js which dependent on angular
     'static/js/lib/angular.min.js',
     'static/js/lib/*.js',
-
+    
     // our app
     'static/js/*.js',
 
-    // tests
+    // tests ==> need to name all tests into folder name "specs"
     'specs/*',
 
     // templates
@@ -34,7 +36,7 @@ module.exports = function(karma) {
     ],
 
 
-    // test results reporter to use
+    // test results reporter to use --> when calling Karma start the sign will appear in cmd
     // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
     reporters: ['dots'],
 
@@ -57,6 +59,7 @@ module.exports = function(karma) {
 
 
     // enable / disable watching file and executing tests whenever any file changes
+    // If "true", when file is changed/saved Karma will rerun the test automatically
     autoWatch: true,
 
 

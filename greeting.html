@@ -1,0 +1,22 @@
+<html>
+    <body ng-app>
+        <!-- Import CSS files at the top for faster performance -->
+        
+        <!-- We can set ng-controller scope in any section but put in this div as this is used only in this section-->
+        <div ng-controller="GreetingController">
+            <!-- We can bind Controller's variable(s) value into textbox as ng-model. (Textbox become model)-->
+            <input  ng-model="name" type="text">
+            
+            <!-- This is how we get variables' or functions' value(s) from Controller -->
+            <br>
+            Name by calling a function: {{getName()}} <!-- This is how we get value from function -->
+            <br>
+            Name by calling a variable: {{name}} <!-- This is how we get value from variable-->
+        </div>
+        
+        <!-- Put script at the downmost of the html file for faster loading -->
+        <script src="static/js/lib/angular.min.js"></script>
+        <script src="static/js/greeting.js"></script>
+        
+    </body>
+</html>
