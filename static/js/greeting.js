@@ -8,4 +8,8 @@ function GreetingController($scope) {
         return $scope.name;
     };
     
+    $scope.clearName = function(){
+        $scope.name='';
+    };
+    
 }

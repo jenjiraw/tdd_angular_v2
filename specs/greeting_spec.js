@@ -24,6 +24,12 @@ describe('Greeting Controller', function () {
         $scope.name = 'Jua';
         expect($scope.getName()).toEqual('Jua');
     });
+    
+    //Requirements: Should clear name if Clear button is clicked
+    it('Should clear name in textbox to blank if clear button is clicked',function(){
+        $scope.clearName();
+        expect($scope.getName()).toEqual('');
+    });
 });
 
 
